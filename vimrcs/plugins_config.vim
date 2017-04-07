@@ -74,10 +74,11 @@ set grepprg=/bin/grep\ -nH
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Nerd Tree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:NERDTreeWinPos = "right"
+let g:NERDTreeWinPos = "left"
 let NERDTreeShowHidden=0
 let NERDTreeIgnore = ['\.pyc$', '__pycache__']
 let g:NERDTreeWinSize=35
+let g:NERDTreeDirArrows=0
 map <leader>nn :NERDTreeToggle<cr>
 map <leader>nb :NERDTreeFromBookmark<Space>
 map <leader>nf :NERDTreeFind<cr>
@@ -168,3 +169,17 @@ nnoremap <silent> <leader>c :call SyntasticCheckCoffeescript()<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:gitgutter_enabled=0
 nnoremap <silent> <leader>d :GitGutterToggle<cr>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => neocomplete 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:acp_enableAtStartup = 0
+" Use neocomplete.
+ let g:neocomplete#enable_at_startup = 1
+" Use smartcase.
+ let g:neocomplete#enable_smart_case = 1
+" Set minimum syntax keyword length.
+ let g:neocomplete#sources#syntax#min_keyword_length = 3
+ let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
+
